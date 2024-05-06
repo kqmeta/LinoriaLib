@@ -12,10 +12,10 @@ local Mouse = LocalPlayer:GetMouse();
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
 local ScreenGui = Instance.new('ScreenGui');
-ScreenGui.Name = "QueueUI"
+ScreenGui.Name = "TeleportGui"
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
-ScreenGui.Parent = LocalPlayer.PlayerGui;
+ScreenGui.Parent = CoreGui;
 
 local Toggles = {};
 local Options = {};
@@ -447,7 +447,7 @@ do
             BorderSizePixel = 0;
             Size = UDim2.new(0, 27, 0, 13);
             ZIndex = 5;
-            Image = 'http://www.roblox.com/asset/?id=12977615774';
+            Image = '';
             Visible = not not Info.Transparency;
             Parent = DisplayFrame;
         });
@@ -510,7 +510,7 @@ do
             BorderSizePixel = 0;
             Size = UDim2.new(1, 0, 1, 0);
             ZIndex = 18;
-            Image = 'rbxassetid://4155801252';
+            Image = '';
             Parent = SatVibMapInner;
         });
 
@@ -518,7 +518,7 @@ do
             AnchorPoint = Vector2.new(0.5, 0.5);
             Size = UDim2.new(0, 6, 0, 6);
             BackgroundTransparency = 1;
-            Image = 'http://www.roblox.com/asset/?id=9619665977';
+            Image = '';
             ImageColor3 = Color3.new(0, 0, 0);
             ZIndex = 19;
             Parent = SatVibMap;
@@ -528,7 +528,7 @@ do
             Size = UDim2.new(0, CursorOuter.Size.X.Offset - 2, 0, CursorOuter.Size.Y.Offset - 2);
             Position = UDim2.new(0, 1, 0, 1);
             BackgroundTransparency = 1;
-            Image = 'http://www.roblox.com/asset/?id=9619665977';
+            Image = '';
             ZIndex = 20;
             Parent = CursorOuter;
         })
@@ -639,7 +639,7 @@ do
             Library:Create('ImageLabel', {
                 BackgroundTransparency = 1;
                 Size = UDim2.new(1, 0, 1, 0);
-                Image = 'http://www.roblox.com/asset/?id=12978095818';
+                Image = '';
                 ZIndex = 20;
                 Parent = TransparencyBoxInner;
             });
@@ -2238,7 +2238,7 @@ do
             BackgroundTransparency = 1;
             Position = UDim2.new(1, -16, 0.5, 0);
             Size = UDim2.new(0, 12, 0, 12);
-            Image = 'http://www.roblox.com/asset/?id=6282522798';
+            Image = '';
             ZIndex = 8;
             Parent = DropdownInner;
         });
@@ -2309,8 +2309,8 @@ do
             ZIndex = 21;
             Parent = ListInner;
 
-            TopImage = 'rbxasset://textures/ui/Scroll/scroll-middle.png',
-            BottomImage = 'rbxasset://textures/ui/Scroll/scroll-middle.png',
+            TopImage = '',
+            BottomImage = '',
 
             ScrollBarThickness = 3,
             ScrollBarImageColor3 = Library.AccentColor,
