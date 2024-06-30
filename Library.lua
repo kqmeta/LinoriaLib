@@ -3532,7 +3532,7 @@ function Library:CreateWindow(...)
 
                 local CursorOutline = Drawing.new('Triangle');
                 CursorOutline.Thickness = 1;
-                CursorOutline.Filled = false;
+                CursorOutline.Filled = true;
                 CursorOutline.Color = Color3.new(0, 0, 0);
                 CursorOutline.Visible = true;
 
@@ -3541,7 +3541,7 @@ function Library:CreateWindow(...)
 
                     local mPos = InputService:GetMouseLocation();
 
-                    Cursor.Color = Library.AccentColor;
+                    CursorOutline.Color = Library.AccentColor;
 
                     Cursor.PointA = Vector2.new(mPos.X, mPos.Y);
                     Cursor.PointB = Vector2.new(mPos.X + 16, mPos.Y + 6);
