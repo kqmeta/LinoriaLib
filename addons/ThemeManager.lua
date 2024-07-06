@@ -177,7 +177,7 @@ local ThemeManager = {} do
 		local out = {}
 		for i = 1, #list do
 			local file = list[i]
-			if file:sub(-5) == '.medusa' then
+			if file:sub(-7) == '.medusa' then
 				-- i hate this but it has to be done ...
 
 				local pos = file:find('.medusa', 1, true)
