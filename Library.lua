@@ -510,7 +510,7 @@ do
             BorderSizePixel = 0;
             Size = UDim2.new(1, 0, 1, 0);
             ZIndex = 18;
-            Image = 'rbxassetid://18343364787';
+            Image = 'rbxassetid://18343364747';
             Parent = SatVibMapInner;
         });
 
