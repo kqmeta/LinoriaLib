@@ -83,7 +83,7 @@ local SaveManager = {} do
 			return false, 'no config file is selected'
 		end
 
-		local fullPath = self.Folder .. '/settings/' .. name .. '.medusa'
+		local fullPath = self.Folder .. '/settings/' .. name .. '.raiden'
 
 		local data = {
 			objects = {}
@@ -116,7 +116,7 @@ local SaveManager = {} do
 			return false, 'no config file is selected'
 		end
 		
-		local file = self.Folder .. '/settings/' .. name .. '.medusa'
+		local file = self.Folder .. '/settings/' .. name .. '.raiden'
 		if not isfile(file) then return false, 'invalid file' end
 
 		local success, decoded = pcall(httpService.JSONDecode, httpService, readfile(file))
@@ -159,10 +159,10 @@ local SaveManager = {} do
 		local out = {}
 		for i = 1, #list do
 			local file = list[i]
-			if file:sub(-7) == '.medusa' then
+			if file:sub(-7) == '.raiden' then
 				-- i hate this but it has to be done ...
 
-				local pos = file:find('.medusa', 1, true)
+				local pos = file:find('.raiden', 1, true)
 				local start = pos
 
 				local char = file:sub(pos, pos)
